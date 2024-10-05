@@ -5,7 +5,7 @@
     <strong>Short Description:Orrery web app is embedded in a webpage and displays celestial bodies such as planets, Near-Earth Asteroids, Near-Earth Comets, and Potentially Hazardous Asteroids.</strong> A brief description of your project.
 </p>
 
-<h2 align="center">Team Name:BYTE FORCE <strong>Your Team Name Here</strong></h2>
+<h2 align="center">Team Name:<strong>BYTE FORCE</strong></h2>
 
 <h3 align="center">Team Members</h3>
 <ul align="center">
