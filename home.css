@@ -1,0 +1,543 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161616;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+header {
+  padding: 20px;
+  background-color: #1c1c1c;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #1c1c1c;
+}
+
+ h2 {
+  margin: 20px ;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.1);
+  text-align: start;
+  margin-left: 20px;
+}
+h1{
+  text-align: left;
+}
+h3{
+  margin-left: 25px;
+  text-decoration: underline;
+}
+
+#solar-system {
+  margin: 50px auto;
+  width: 600px;
+  height: 600px;
+  position: relative;
+}
+
+#real-time-data-section, #planet-data-section {
+  margin-top: 20px;
+  text-align: start;
+  margin-left: 30px;
+}
+
+#show-data-btn, #planet-data-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  
+}
+
+#show-data-btn:hover, #planet-data-btn:hover {
+  background-color: #0056b3;
+  box-shadow: #fff;
+}
+
+.data-box {
+  border: 2px solid #1c1c1c;
+  background-color: #222;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+  color: #fff;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.data-box h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+.data-box h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #00aaff;
+}
+
+.data-box p {
+  margin: 5px 0;
+}
+
+.data-box hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 10px 0;
+}
+
+.data-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+#search-section {
+  margin: 20px 0;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+  width: 1420px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: black;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#search-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+#search-btn:hover {
+  background-color: #0056b3;
+}
+
+.data-box {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+#deflectionmethods{
+  margin-top: 20px;
+  text-align: start;
+  margin-left: 30px;
+  
+}
+
+ #missionsButton{
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  margin-top: 6px;
+}
+
+#missionsButton:hover{
+  background-color: #0056b3;
+  box-shadow: #fff;
+}
+
+#show-missions-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#show-missions-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 5px #fff;
+}
+
+#virtualspacemissions{
+  margin-top: 20px;
+  text-align: start;
+  margin-left: 30px;
+}
+#fetchAlignments {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease;
+  text-align: left;
+  font-family: Arial, sans-serif ;
+  margin-top: 10px;
+}
+
+#fetchAlignments:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 5px #fff;
+}
+
+#alignments {
+  margin-top: 20px;
+  padding: 10px;
+  background-color:black;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: left;
+}
+
+#alignmentTypes {
+  margin-top: 20px;
+  padding: 10px;
+  background-color:black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+  font-family: Arial, sans-serif ;
+}
+
+#planetaryalignments{
+  margin-top: 20px;
+  text-align: start;
+  margin-left: 30px;
+}
+
+ #fetchAsteroids {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            
+        }
+        #fetchAsteroids:hover {
+            background-color: #0056b3;
+            box-shadow: 0 0 5px #fff;
+        }
+        #asteroidData {
+            margin-top: 20px;
+            padding: 10px;
+            background-color:black;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: left;
+            font-family: Arial, sans-serif ;
+        }
+        #infoSection {
+            margin-top: 20px;
+            padding: 10px;
+            background-color:black;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+             text-align:left ;
+        }
+
+ #asteroidhazardous{
+  margin-top: 20px;
+  text-align: start;
+  margin-left: 30px;
+ }
+
+ .container{
+  margin-top: 20px;
+  padding: 10px;
+  background-color:black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+   text-align:left ;
+  
+ }
+
+ #fetchDataBtn{
+  padding: 10px 20px;
+  background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   transition: background-color 0.3s ease;
+   margin-top: 10px;
+           
+ }
+
+ #fetchDataBtn:hover{
+  background-color: #0056b3;
+  box-shadow: 0 0 5px #fff;
+ }
+
+ #nasatime{
+  margin-top: 20px;
+  text-align: start;
+  margin-left: 30px;
+ }
+ p{
+  margin-top: 20px;
+  text-align: start;
+  margin-left: 30px;
+ }
+
+ #challenges{
+  margin-top: 20px;
+  padding: 5px;
+  background-color:black;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+   text-align:left ;
+   font-family: Arial, sans-serif ;
+
+ }
+
+ #nasadefence{
+  margin-top: 10px;
+  text-align: start;
+  margin-left: 30px;
+  
+ }
+
+ #fetchButton{
+  padding: 10px 20px;
+  background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   transition: background-color 0.3s ease;
+   margin-top: 4px;
+ }
+
+ #fetchButton:hover{
+  background-color: #0056b3;
+  box-shadow: 0 0 5px #fff;
+ }
+
+ #heatMapButton{
+  padding: 10px 20px;
+  background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   transition: background-color 0.3s ease;
+   margin-top: 2px;
+ } 
+ #heatmap{
+  margin-top: 10px;
+  text-align: start;
+  margin-left: 30px;
+ }
+
+ #heatMapButton:hover{
+  background-color: #0056b3;
+  box-shadow: 0 0 5px #fff;
+ }
+
+
+ #charts-container {
+  display: none; /* Initially hidden */
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+  background-color: white;
+}
+canvas {
+  max-width: 600px;
+  margin: 20px auto;
+}
+#loading {
+  display: none;
+  font-size: 18px;
+  margin-top: 20px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#showGraphsBtn{
+  padding: 10px 20px;
+  background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   transition: background-color 0.3s ease;
+   margin-top: 6px;
+}
+
+#showGraphsBtn:hover{
+  background-color: #0056b3;
+  box-shadow: 0 0 5px #fff;
+}
+
+#showgraph{
+  margin-top: 10px;
+  text-align: start;
+  margin-left: 30px;
+}
+
+#arButton{
+  padding: 10px 20px;
+  background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   transition: background-color 0.3s ease;
+   margin-top: 10px;
+}
+
+#arButton:hover{
+  background-color: #0056b3;
+  box-shadow: 0 0 5px #fff;
+}
+
+#vrButton{
+  padding: 10px 20px;
+  background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   transition: background-color 0.3s ease;
+   margin-left: 10px;
+}
+
+#vrButton:hover{
+  background-color: #0056b3;
+  box-shadow: 0 0 5px #fff;
+}
+
+.button-container{
+  margin-top: 10px;
+  text-align: start;
+  margin-left: 20px;
+}
+
+#saveButton{
+  padding: 10px 20px;
+  background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   transition: background-color 0.3s ease;
+}
+#saveButton:hover{
+  background-color: #0056b3;
+  box-shadow: 0 0 5px #fff;
+}
+
+#shareButton{
+  padding: 10px 20px;
+  background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   transition: background-color 0.3s ease;
+   margin-left: 20px;
+}
+#shareButton:hover{
+  background-color: #0056b3;
+  box-shadow: 0 0 5px #fff;
+}
+#saveandshare{
+  margin-top: 10px;
+  text-align: start;
+  margin-left: 20px;
+}
+#showWeatherButton{
+  padding: 10px 20px;
+  background-color: #007bff;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-bottom: 10px;
+   transition: background-color 0.3s ease;
+   margin-top: 6px;
+   margin-left: 10px;
+}
+#showWeatherButton:hover{
+  background-color: #0056b3;
+  box-shadow: 0 0 5px #fff;
+}
+#weather{
+  margin-top: 10px;
+  text-align: start;
+  margin-left: 20px;
+}
+#footer p{
+  align-items: center;
+  text-align: center;
+}
+
+::-webkit-scrollbar{
+width: 10px;
+}
+::-webkit-scrollbar-track{
+  background: #222;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #888;
+  border-radius: 10px;
+}
+
+
+ 

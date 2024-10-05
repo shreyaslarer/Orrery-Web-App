@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Solar System</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <header>
+    <h1>SKY MAP 360</h1>
+  </header>
+  <section id="search-section"></section>
+    <input type="text" id="search-input" placeholder="Search for a celestial body (e.g., Earth, Mars)">
+    <button id="search-btn">Search</button>
+  </section>
+
+  <section id="result-section">
+    <div id="result-box" class="data-box">
+      <!-- Search results will be displayed here -->
+    </div>
+  </section>
+  <iframe src="orrery.html" width="1530" height="1000"></iframe>
+  <br>
+  
+  <h2>Real-Time Planet Data</h2>
+  <section id="planet-data-section">
+    <button id="planet-data-btn">Show Real-Time Planet Data</button>
+    <div id="planet-data-box" class="data-box">
+      <!-- Planet data will be displayed here -->
+    </div>
+  </section>
+<hr>
+  <h2>NASA Real-Time Data</h2>
+  <section id="real-time-data-section">
+    <button id="show-data-btn">Show NASA Real-Time Data</button>
+    <div id="real-time-data-box" class="data-box">
+      <!-- NASA real-time data will appear here -->
+    </div>
+  </section>
+  
+<hr>
+  <h2>Virtual Space Missions</h2>
+  <section id="virtualspacemissions">
+    <button id="show-missions-btn">Show NASA Space Missions</button>
+
+    <!-- Div to Display the Real-Time Space Mission Data -->
+    <div id="missions-data-box"></div>
+  </section>
+  <hr>
+  <h2>Planetary Alignments</h2>
+  <section id="planetaryalignments">
+    <button id="fetchAlignments">Get Planetary Alignments</button>
+  </section>
+
+  <div id="alignments"></div>
+    <h2>Types of Planetary Alignments</h2>
+    <div id="alignmentTypes">
+        <ul>
+            <li><strong>Conjunctions:</strong> When two planets appear very close to each other in the sky.</li><br>
+            <li><strong>Syzygy:</strong> A straight-line configuration of three celestial bodies, often involving the Earth, the Sun, and a planet (e.g., during a full moon, the Sun, Earth, and Moon are aligned).</li><br>
+            <li><strong>Oppositions:</strong> Occur when a planet is on the opposite side of the Earth from the Sun, making it fully illuminated.</li><br>
+        </ul>
+    </div>
+    <hr>
+    <h2>Asteroid Hazard Prediction</h2>
+    <section id="asteroidhazardous">
+    <button id="fetchAsteroids">Get Asteroid Data</button>
+  </section>
+    <div id="asteroidData"></div>
+    
+    
+    <hr>
+    <h2>NASA Time-Related Studies(Historical time travel)</h2>
+    <section id="nasatime">
+    <button id="fetchDataBtn">Get NASA's Research</button>
+  </section>
+    <div class="container">
+      <div id="content" class="content"></div>
+  </div>
+  <hr>
+  <h2>NASA Planetary Defense: Near-Earth Objects (NEOs)</h2>
+    <p>Click the button below to load real-time planetary defense data (NEOs).</p>
+    <section id="nasadefence">
+    <button id="fetchButton">Get NEO Data</button>
+  </section>
+  
+    <div id="challenges">
+        <h2>Near-Earth Objects (NEO):</h2>
+        <ul id="challengeList"></ul>
+    </div>
+    <hr>
+    <div id="infoSection">
+      <h2>Near-Earth Object (NEO) Program</h2>
+      <p><strong>Purpose:</strong> The NEO program is designed to find, track, and characterize asteroids and comets that come close to Earth.</p>
+      <p><strong>Objectives:</strong> The main goals include assessing the potential hazard these objects may pose, understanding their physical properties, and developing potential mitigation strategies.</p> <br>
+      <h3>Detection and Tracking</h3>
+      <p><strong>Space Telescopes:</strong> NASA uses telescopes like the Pan-STARRS and the Catalina Sky Survey to detect new asteroids.</p> 
+      <p><strong>Data Analysis:</strong> Once detected, astronomers analyze their orbits and physical characteristics to determine their trajectory and potential impact risks.</p> <br>
+      <h3>Impact Prediction Models</h3>
+      <p><strong>Risk Assessment:</strong> NASA utilizes advanced computer models to predict the potential impact of asteroids, calculating their orbits with precision.</p> 
+      <p><strong>Monitoring:</strong> Continuous monitoring is essential as asteroids' orbits can change over time due to gravitational interactions.</p> <br>
+      <h3>Close Approach Notifications</h3>
+      <p><strong>Public Database:</strong> NASA maintains a database of NEOs that includes information about their size, orbit, and potential risk.</p> 
+      <p><strong>Alerts:</strong> NASA issues alerts when an asteroid is predicted to come within a certain distance of Earth.</p> <br>
+      <h3>Hazard Mitigation Strategies</h3>
+      <p><strong>Deflection Techniques:</strong> NASA researches various methods to deflect or disrupt a hazardous asteroid.</p> 
+      <p><strong>Planetary Defense Coordination Office (PDCO):</strong> Established to coordinate efforts across various NASA divisions.</p> <br>
+      <h3>Educational Outreach and Collaboration</h3>
+      <p><strong>Public Awareness:</strong> NASA engages in outreach programs to educate the public about the risks associated with asteroids.</p> 
+      <p><strong>International Cooperation:</strong> Collaboration with other space agencies and organizations worldwide.</p> <br>
+      <h3>Key Missions and Initiatives</h3>
+      <p><strong>DART:</strong> A mission to test asteroid deflection technology.</p> 
+      <p><strong>NEOWISE:</strong> A space telescope that has been surveying the NEO population.</p> <br>
+      <h3>Recent Findings and Developments</h3>
+      <p><strong>Data Sharing:</strong> NASA collaborates with ESA and other organizations.</p> 
+      <p><strong>Discovery of New Objects:</strong> Ongoing surveys continue to discover new NEOs.</p> <br>
+  </div>
+    <h2>NASA Real-Time Heat Maps</h2>
+    <p>Click the button below to fetch and display real-time heat maps data.</p>
+    <section id="heatmap">
+    <button id="heatMapButton">Get Heat Map Data</button>
+  </section>
+    <div id="heatMapContainer">
+        <h2>Global Surface Temperature Heat Map:</h2>
+        <img id="heatMapImage" src="nasaheatmap.png" width="1250px" height="800px" alt="NASA Heat Map will be displayed here" />
+        <p id="heatMapDetails"></p>
+        <p id="errorMessage"></p>
+    </div>
+    <hr>
+    <h2>Deflection Methods</h2>
+<section id="deflectionmethods">
+    <button id="missionsButton">Explore Deflection Missions</button>
+    <div id="missionsContainer" style="display: none;">
+        <div id="methods" class="mission"></div>
+    </div>
+</section>
+<hr>
+
+    <h2>Asteroids Orbits and Flybys</h2>
+  <section id="showgraph">
+    <button id="showGraphsBtn">Show Graphs and Charts</button>
+  </section>
+    <!-- Loading message -->
+    <div id="loading">Loading data, please wait...</div>
+
+    <!-- Charts container for orbit and flyby charts -->
+    <div id="charts-container">
+        <canvas id="orbitChart"></canvas>
+        <canvas id="flybyChart"></canvas>
+    </div>
+    <hr><hr color="black">
+    <h2>Show Weather</h2>
+  <section id="weather">
+    <button id="showWeatherButton">Show Weather</button>
+  </section>
+    <div id="weather-info"></div>
+    <div id="solar-system-photos"></div>
+    <hr>
+    <div class="container">
+      <h2>NASA Augmented Reality (AR) and Virtual Reality (VR) Features</h2>
+      <!-- Buttons to trigger AR and VR features -->
+      <div class="button-container">
+          <button id="arButton">Explore Augmented Reality (AR)</button>
+          <button id="vrButton">Explore Virtual Reality (VR)</button>
+      </div>
+
+      <!-- Display real-time data and features -->
+      <div id="output">
+          <h2 id="feature-title"></h2>
+          <div id="feature-content"></div>
+      </div>
+      <hr>
+      <section id="saveandshare">
+        <button id="saveButton">Save Data</button>
+            <button id="shareButton">Share</button>
+      </section>
+      <p id="loading" style="display: none;">Loading data...</p>
+  <footer id="footer">
+    <p>© 2024 Interactive Solar System</p>
+  </footer>
+
+  <script src="home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</body>
+</html>

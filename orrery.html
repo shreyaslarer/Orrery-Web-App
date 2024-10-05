@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="orrery.css">
+  <title>SKY MAP 360</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+    #buttons {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+    button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="buttons">
+    <button id="view3D">3D View</button>
+    <button id="view2D">2D View</button>
+  </div>
+  <script type="module" src="orrery.js"></script>
+</body>
+</html>

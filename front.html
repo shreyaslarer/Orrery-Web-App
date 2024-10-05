@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the Cosmos in Real-Time with SkyMap360. Interactive Orrery, Augmented Reality, and more!">
+    <title>Skymap360 - Explore the Cosmos</title>
+    <link rel="stylesheet" href="front.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 style="margin-left:15px; color:rgb(212, 212, 219)">SKYMAP360</h1>
+            <nav>
+                <ul>
+                    <select name="features" class="selectnavbar">
+                        <option value="features" selected>Features</option>
+                        <option value="intorrery"><a href="#orrery">astoroids</a></option>
+                        <a href="#ar"><option value="arexp">AR Experience</option></a>
+                        <a href="#tours"><option value="edtour">Educational Tours</option></a>
+                        <a href="#events"><option value="cosevent">Cosmic Events</option></a>
+                        <a href="#blog"><option value="blog">Blog</option></a>
+                        <a href="#shop"><option value="shop">Shop</option></a>
+                    </select>
+                    
+                    <select name="contactus" class="selectnavbar">
+                        <option value="Contactus" selected>Contact Us</option>
+                        <option value="gnrlinquries">General Inquiries</option>
+                        <option value="support">Support</option>
+                        <option value="media">Media</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="socialmedia">Social media</option>
+                    </select>
+                    <select name="about us" class="selectnavbar">
+                        <option value="aboutus" selected>About Us</option>
+                        <option value="ourmission">Our Vision</option>
+                        <option value="ourteam">Our Team</option>
+                        <option value="history">History</option>
+                        <option value="partners">Partners</option>
+                    </select>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background">
+            <video autoplay muted loop>
+                <source src="spaceanimate.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div class="hero-content">
+            <h2>Explore the Cosmos in Real-Time</h2>
+            <a href="#orrery" class="cta-button">Start Exploring</a>
+            <br><br><br>
+            <a href="login.html" class="cta-button">Login</a>
+        </div>
+    </section>
+    <section class="vision">
+        <h1>OUR VISION</h1>
+        <ul>
+            <li>Vision: "At Space360, our vision is to unlock the mysteries of space and bring the wonders of the universe closer to everyone. We strive to provide real-time, accurate information on the objects orbiting Earth, allowing users to explore and stay informed about the ever-evolving landscape of space. Through innovation and user-friendly design, we aim to make space science more accessible to enthusiasts, students, and professionals alike.
+            </li><br>
+            <li>Our mission is to inspire a sense of awe and curiosity in people of all ages by creating a platform that empowers users to observe and understand space phenomena in a comprehensive yet simplified manner. By presenting complex data in an intuitive way, we seek to ignite a passion for space exploration and deepen our collective knowledge of the cosmos.
+            </li><br>
+            <li>Space360 is committed to supporting education, research, and public awareness of the importance of monitoring near-Earth objects and their impact on the future of our planet. We envision a future where space awareness becomes an integral part of global consciousness, helping to drive innovation, exploration, and the safeguarding of our shared home, Earth."
+            </li><br>
+            <li>This vision places Space360 as not only an informative platform but also as an educational and inspirational tool for the broader community.</li>
+        </ul>
+    </section>
+    <section id="orrery" class="orrery-section">
+        <h2>3D Astoroids</h2>
+        <div id="orrery-container">
+            <video autoplay muted loop>
+                <source src="astoroids.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <p>Click on celestial objects to learn more about them!</p>
+        <!-- Time Control -->
+        <div class="time-controls">
+            <button onclick="decrease()" id="rewindButton">Rewind</button>
+            <input type="range" id="time-slider" min="0" max="100" value="50">
+            <button onclick="increase()" id="forwardButton">Forward</button>
+        </div>
+    </section>
+
+    <section id="ar" class="ar-section">
+        <h2>Augmented Reality Experience</h2>
+        <p>Experience celestial bodies in your surroundings with AR!</p>
+        <a href="home.html"><button id="ar-demo-btn">View AR Demo</button></a>
+    </section>
+
+    <section id="tours" class="tours-section">
+        <h2>Educational Tours</h2>
+        <p>Join our narrated tours through the solar system!</p>
+        <a href="tour.html"><button id="start-tour-btn">Start a Tour</button></a>
+    </section>
+
+    <section id="events" class="events-section">
+        <h2>Cosmic Events Calendar</h2>
+        <div id="events-calendar"></div>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <h2>Blog</h2>
+            <p>Stay updated with the latest space discoveries!</p>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <h3>Recent Discoveries in Astronomy</h3>
+                <p>Explore the latest findings from space exploration.</p>
+                <!-- Placeholder for images -->
+                <img src="blackhole.jpeg" alt="Discoveries in Astronomy" class="blog-image">
+                
+            </div>
+            <div class="blog-post">
+                <h3>Understanding Eclipses</h3>
+                <p>Learn about the science behind solar and lunar eclipses.</p>
+                <!-- Placeholder for images -->
+                <img src="eclipse.webp" alt="Understanding Eclipses" class="blog-image">
+                
+            </div>
+            <div class="blog-post">
+                <h3>OSIRIS-REx Sample Return</h3>
+                <p>NASA returned asteroid Bennu samples, revealing insights into solar system formation</p>
+                <img src="osirisreX.jpg" alt="osiriRex" class="blog-image">
+            
+            </div>
+            <div class="blog-post">
+                <h3>MOXIE Oxygen Experiment</h3>
+                <p>Perseverance's MOXIE produced oxygen, a key for future Mars​</p>
+                <img src="moxi.jpg" alt="moxi" class="blog-image">
+            </div>
+            <div class="blog-post">
+                <h3>Psyche Mission</h3>
+                <p> NASA's Psyche spacecraft launched to study a metal-rich asteroid's core​</p>
+                <img src="psyche.jpg" alt="psyche" class="blog-image">
+            </div>
+            <div class="blog-post">
+                <h3>Supersonic Flight: X-59 Aircraft</h3>
+                <p>NASA’s X-59 aims for quiet supersonic flight, reducing sonic booms​</p>
+                <img src="x-59.jpg" alt="x-59" class="blog-image">
+            </div>
+            <div class="blog-post">
+                <h3>James Webb Space Telescope:</h3>
+                <p>JWST's first year provided stunning images of galaxies and star formations​</p>
+                <img src="jamesweb.webp" alt="jamesweb" class="blog-image">
+            </div>
+            <div class="blog-post">
+                <h3>Europa Clipper:</h3>
+                <p>Set for 2024, this mission will explore Jupiter’s moon for potential life​</p>
+                <img src="europaclipper.webp" alt="europaclipper" class="blog-image">
+            </div>
+            <div id="Explore">
+                <a href="blog.html"><button style="display: block;">Explore more</button></a>
+            </div>
+            
+        </div>
+    </section>
+    <section id="newssection">
+        <h2>Latest Space News</h2>
+        <p>Explore the latest discoveries,events and news from the world of space.</p>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <h3>Curiosity about Mars rover's wheels</h3>
+                <p>After more than 12 years exploring Mars, NASA's Curiosity rover has tired feet — err, wheels.
+                </p>
+                <img src="mars rover.webp" alt="mars rover" class="blog-image">
+            </div>
+            <div class="blog-post">
+                <h3>A Ring of Fire Over Earth</h3>
+                <p>A "ring of fire" burns over Easter island in a solar eclipse.The sun and moon align in the sky over Easter Island, or Rapa Nui, in this....</p>
+                <img src="ringfire.jpg" alt="ringfire" class="blog-image">
+            </div>
+            <div class="blog-post">
+                <h3>Mass extinctions on Earth can help us find alien life in the cosmos.</h3>
+                <p>These events can either be a catastrophe the thing that has happened to our planet.</p>
+                <img src="massextinction.webp" alt="massextinction" class="blog-image">
+            </div>
+            <div class="blog-post">
+                <h3>Can you see Earth's new 'mini-moon' with the naked eye?</h3>
+                <p>On Sunday (Sept. 29), Earth captured a "second moon" that will accompany our planet on its journey around the sun.....</p>
+                <img src="minimoon.webp" alt="minimoon" class="blog-image">
+            </div>
+            <br>
+            <a href="news.html"><button>Know more</button></a>
+        </div>
+    </section>
+
+    <section id="shop" class="shop-section">
+        <h2>Shop Space Merchandise</h2>
+        <p>Discover space-themed products!</p>
+        <div class="product-list">
+            <div class="product-item">
+                <h4>Space Poster</h4>
+                <p>$19.99</p>
+                <!-- Placeholder for product images -->
+                <img src="spaceposter.jpg" alt="Space Poster" class="product-image">
+                <button>Buy now</button>
+            </div>
+            <div class="product-item">
+                <h4>Telescope</h4>
+                <p>$199.99</p>
+                <!-- Placeholder for product images -->
+                <img src="telescope.jpg" alt="Telescope" class="product-image" height="200px">
+                <button>Buy now</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>Get to Know Us</h2>
+                <ul>
+                    <li><a href="">About Skymap360</a></li>
+                    <li><a href="">Careers</a></li>
+                    <li><a href="">Press releases</a></li>
+                    <li><a href="">Space Science</a></li>    
+            </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Contact with Us</h2>
+                <ul>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Twitter</a></li>
+                    <li><a href="">Instagram</a></li>    
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Partnerships</h2>
+                <ul>
+                    <li><a href="">NASA</a></li>
+                    <li><a href="">Spacex</a></li>
+                    <li><a href="">ISRO</a></li>
+                    <li><a href="">SRC</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Let Us Help You</h2>
+                <ul>
+                    <li><a href="">Your Account</a></li>
+                    <li><a href="">Space Centre</a></li>
+                    <li><a href="">Help</a></li>
+                    <li><a href="">Space360 Resource</a></li>
+                  
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div id="support">
+            <h3>G-mail: <a href="#">supportspace360@gmail.com</a></h3>
+            <h3>Contact NO: <a href="#">+91 000000000</a></h3>
+        </div>
+        <div class="feedback"></div>
+            <h2 style="text-align: left;">Feedback:</h2>
+            <textarea name="feedback" id="feedback" rows="6" cols="198" placeholder="Leave your valuable feedback....."></textarea>
+        </div>
+        <button>Send</button>
+        <hr>
+        <div class="copyright">
+            &copy; 2024 All Rights Reserved
+        </div>
+        
+        
+    </footer>
+    
+    <script src="front.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</body>
+</html>

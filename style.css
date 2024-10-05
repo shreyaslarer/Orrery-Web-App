@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+#c {
+  background: black;
+  background-size: cover;
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 5px;
+  left: 2%;
+  width: 120px;
+}
+
+.btn {
+  background: white;
+  color: black;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#msg {
+  position: absolute;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  font-family: sans-serif;
+  margin: 0 auto;
+}
+
+.btn-zoom {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 40px;
+  left: 10px;
+  height: 120px;
+}
+
+.quality-select {
+  position: fixed;
+  top: 20px;
+  right: 5px;
+}
+
+button {
+  position: fixed; /* Position relative to the viewport */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  background-color: #007BFF; /* Blue color */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding around text */
+  font-size: 16px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+  z-index: 1000; /* High z-index to ensure visibility */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Positioning buttons */
+#view2D {
+  bottom: 60px; /* Adjust to avoid overlap */
+}
+#view3D{
+  bottom:10px
+}

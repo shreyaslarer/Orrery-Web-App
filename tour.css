@@ -1,0 +1,22 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+     flex-wrap: wrap;
+}
+h2{
+    text-align: center;
+}
+.video{
+    background: #444;
+    margin: 15px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.video:hover{
+    box-shadow: 4px 4px 8px  rgb(125, 120, 120);
+}
+.yvid{
+    border-radius: 10px;
+}
